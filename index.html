@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
     <title>GMFIT - The Place Without Shame</title>
     <style>
         * {
@@ -165,6 +166,91 @@
             height: auto;
             display: block;
             margin: 0;
+        }
+
+        /* Special Offer Section */
+        .special-offer {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            /* background-image: url('images/cover.png'); */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .special-offer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: rgba(0, 0, 0, 0.5); */
+        }
+
+        .offer-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 0;
+            max-width: 700px;
+            margin: 0 20px;
+        }
+
+        .offer-title {
+            font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+            font-size: 48px;
+            color: #cfb2ad;
+            margin-bottom: 20px;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        .offer-subtitle {
+            font-size: 14px;
+            color: #000000;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .offer-discount {
+            font-size: 120px;
+            font-weight: 900;
+            color: #FF0000;
+            line-height: 1;
+            letter-spacing: -5px;
+            text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .special-offer {
+                height: 350px;
+            }
+
+            .offer-title {
+                font-size: 32px;
+            }
+
+            .offer-subtitle {
+                font-size: 11px;
+            }
+
+            .offer-discount {
+                font-size: 80px;
+            }
+
+            .offer-content {
+                padding: 30px 20px;
+            }
         }
 
         /* Main Content */
@@ -407,7 +493,6 @@
         }
 
         .footer-links a {
-            /* color: #4a90e2; */
             color: #cfb2ad;
             text-decoration: none;
             font-size: 14px;
@@ -447,7 +532,6 @@
         }
 
         .footer-credit {
-            /* color: #666; */
             color: white;
             font-size: 12px;
             margin-top: 20px;
@@ -610,9 +694,9 @@
     <div class="content-wrapper">
         <section class="intro-section" id="about">
             <h1>Добре дошли в GMFIT</h1>
-            <p>Създавам GMFIT като събирателно място за тренировка на тялото и душата. Основната ми цел е да изграждаме здраво и функционално тяло, а не да достигаме типичната „фитнес“ визия. Тренировъчната ми концепция не е нищо познато и правено до сега и не може да бъде „категоризирана“.</p> 
-            <p>Съчетанието между пилатес, функционални и кондиционни тренировки, стречинг и развиване на издръжливост са в основата на моята „fit“ програма. Тренировките ще са в малки групи /максимум до пет жени на посещение/, защото не само ще изразходваме енергия, а ще изградим цялостна тренировъчна програма според индивидуалните цели на всяка една от вас.</p> 
-            <p>Има и вариант за изцяло индивидуален хранителен и тренировъчен „коучинг“. GMFIT не е мястото на което ще намерите изтощителни кардио тренировки в големи групи. Моята концепция е нещо съвсем различно, изградено на база на личния ми опит със спорта, храненето и състоянието на духа.</p> 
+            <p>Създавам GMFIT като събирателно място за тренировка на тялото и душата. Основната ми цел е да изграждаме здраво и функционално тяло, а не да достигаме типичната „фитнес" визия. Тренировъчната ми концепция не е нищо познато и правено до сега и не може да бъде „категоризирана".</p> 
+            <p>Съчетанието между пилатес, функционални и кондиционни тренировки, стречинг и развиване на издръжливост са в основата на моята „fit" програма. Тренировките ще са в малки групи /максимум до пет жени на посещение/, защото не само ще изразходваме енергия, а ще изградим цялостна тренировъчна програма според индивидуалните цели на всяка една от вас.</p> 
+            <p>Има и вариант за изцяло индивидуален хранителен и тренировъчен „коучинг". GMFIT не е мястото на което ще намерите изтощителни кардио тренировки в големи групи. Моята концепция е нещо съвсем различно, изградено на база на личния ми опит със спорта, храненето и състоянието на духа.</p> 
             <p>Очаква ви нещо много иновативно. Бъдете готови за изненади!</p>
             <div class="launch-info">
                 <div class="countdown-container">
@@ -647,7 +731,18 @@
         </section>
 
         <img src="images/b&w.png" alt="GMFIT" class="hero-image">
-        
+        <div class="spacer-75"></div>
+
+        <!-- Special Offer Section -->
+        <section class="special-offer">
+            <div class="offer-content">
+                <h2 class="offer-title">Специална оферта през Декември</h2>
+                <div class="offer-discount">-50%</div>
+                <div class="spacer-35"></div>
+                <p class="offer-subtitle" style="font-weight: 900;">Важи за цялостен коучинг / хранителен и тренировъчен режим</p>
+            </div>
+        </section>
+
         <!-- Pricing Section -->
         <section class="pricing-section" id="pricing">
             <div class="pricing-container">
@@ -699,16 +794,16 @@
         </section>
 
         <!-- Gallery Section -->
-        <section class="gallery-section">
+        <!-- <section class="gallery-section">
             <h2 class="section-title"><i class="fas fa-images"></i><span style="margin-right: 20px;"></span>Галерия</h2>
             [GALLERY_SHORTCODE]
-        </section>
+        </section> -->
 
         <!-- Reviews Section -->
-        <section class="reviews-section">
+        <!-- <section class="reviews-section">
             <h2 class="section-title"><i class="fas fa-star section-icon"></i><span style="margin-right: 20px;"></span>Отзиви</h2>
             [REVIEWS_SHORTCODE]
-        </section>
+        </section> -->
     </div>
 
     <!-- Footer -->
@@ -923,7 +1018,31 @@
         }
 
         // Start countdown
-        startCountdown("2025-12-06T10:00:00", "countdown1");
+        startCountdown("2025-12-06T08:00:00", "countdown1");
+
+        // Hide special offer after December
+        function hideSpecialOffer() {
+            const offerEndDate = new Date("2026-01-01T00:00:00").getTime();
+            const specialOfferSection = document.querySelector('.special-offer');
+
+            if (!specialOfferSection) return;
+
+            function checkAndHide() {
+                const now = Date.now();
+                if (now >= offerEndDate) {
+                    specialOfferSection.style.transition = 'opacity 0.6s ease-out';
+                    specialOfferSection.style.opacity = '0';
+                    setTimeout(() => {
+                        specialOfferSection.classList.add('hidden');
+                        specialOfferSection.style.opacity = '';
+                    }, 600);
+                }
+            }
+
+            checkAndHide();
+        }
+
+        hideSpecialOffer()
     </script>
 </body>
 </html>
